@@ -53,3 +53,18 @@ WSGIScriptAlias /  /var/www/xxxx/uliwebzone/wsgi_handler.py
 重启apache服务器
 
 7.使用超级用户登录。。。
+#补充内容
+安装uliweb和plugs时，可以使用:
+
+python setup.py develop
+
+这样的一个好处是：并不会拷贝文件到site-packages下，而只是建一个链接。同时以后如果版本不升级，只要svn update即可。
+
+##补充
+另外uliweb, plugs在git上都有项目。
+
+这里好象没考虑把静态文件让web server来处理。uliweb提供uliweb exportstatic outputdir的命令，可以导出所有的静态文件。
+
+另，MySQL的文本字段(TEXT)缺省只能支持64K大小，所以如果贴子过长，想支持更大的，可以直接修改数据库中的大小，如：
+
+ALTER TABLE forumpost modify column `content` mediumtext;
