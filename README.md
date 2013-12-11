@@ -68,3 +68,12 @@ python setup.py develop
 另，MySQL的文本字段(TEXT)缺省只能支持64K大小，所以如果贴子过长，想支持更大的，可以直接修改数据库中的大小，如：
 
 ALTER TABLE forumpost modify column `content` mediumtext;
+
+##补充2
+Simple Todo (Uliweb 版本) 之 基础篇
+Simple Todo (Uliweb 版本) 之 高级篇
+Hello, Uliweb
+迷你留言板
+Sina Application Engine部署及开发指南
+Baidu Application Engine部署及开发指南
+Heroku 部署说明
